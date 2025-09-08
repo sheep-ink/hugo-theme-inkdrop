@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{ .Content }}
+  <div>
+    <ul>
+      {{ range sort .Site.Data.books.knowledgeWork "title" }}
+        <li>{{ .title }}（{{ .author }}）</li>
+      {{ end }}
+    </ul>
+    {{ range site.RegularPages }}
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{ .Summary }}
+    {{ end }}
+  </div>
+{{ end }}
