@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ .Content }}
   <div>
+    <h2>バージョンの設定方法をテストしてみたいと思います!!</h2>
     <ul>
       {{ range sort .Site.Data.books.knowledgeWork "title" }}
         <li>{{ .title }}（{{ .author }}）</li>
